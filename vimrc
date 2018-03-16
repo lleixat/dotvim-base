@@ -15,7 +15,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ap/vim-buftabline'
 Plug 'joonty/vdebug'
 
-Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'dikiaap/minimalist'
 
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-sensible'
@@ -26,6 +26,8 @@ Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
+set t_Co=256
+syntax on
 set mouse=a
 set nu
 set tabstop=4
@@ -33,13 +35,17 @@ set shiftwidth=4
 set expandtab
 
 set background=dark
-colorscheme hybrid_material
+colorscheme minimalist
+highlight clear SignColumn
 
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_theme = "hybrid"
 let g:airline_section_a = '%{hostname()}'
