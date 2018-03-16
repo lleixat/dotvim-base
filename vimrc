@@ -7,12 +7,15 @@ Plug 'ervandew/supertab'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'majutsushi/tagbar'
 Plug 'joonty/vdebug'
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'ap/vim-buftabline'
 Plug 'joonty/vdebug'
+
+Plug 'kristijanhusak/vim-hybrid-material'
 
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-sensible'
@@ -25,8 +28,20 @@ call plug#end()
 
 set mouse=a
 set nu
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
-let g:airline_theme='simple'
+set background=dark
+colorscheme hybrid_material
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+let g:airline_theme = "hybrid"
 let g:airline_section_a = '%{hostname()}'
 
 let g:fzf_layout = { 'down': '30%' }
