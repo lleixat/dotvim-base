@@ -8,6 +8,8 @@ Plug 'shawncplus/phpcomplete.vim'
 Plug 'majutsushi/tagbar'
 Plug 'joonty/vdebug'
 Plug 'jiangmiao/auto-pairs'
+Plug 'qbbr/vim-symfony'
+Plug 'SirVer/ultisnips'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -15,7 +17,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ap/vim-buftabline'
 Plug 'joonty/vdebug'
 
-Plug 'dikiaap/minimalist'
+Plug 'kristijanhusak/vim-hybrid-material'
 
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-sensible'
@@ -26,17 +28,15 @@ Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
-set t_Co=256
-syntax on
 set mouse=a
 set nu
 set tabstop=4
 set shiftwidth=4
 set expandtab
+let mapleader=","
 
 set background=dark
-colorscheme minimalist
-highlight clear SignColumn
+colorscheme hybrid_material
 
 augroup numbertoggle
   autocmd!
@@ -44,11 +44,15 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+if executable('ag')
+      let g:ackprg = 'ag --vimgrep'
+  endif
 
-let g:airline_theme = "hybrid"
+let g:UltiSnipsEditSplit="vertical"
+
+let g:airline_theme = "lucius"
 let g:airline_section_a = '%{hostname()}'
+let g:airline_powerline_fonts = 1
 
 let g:fzf_layout = { 'down': '30%' }
 
@@ -67,3 +71,7 @@ nnoremap <silent> <S-Left> :bprevious<CR>
 nnoremap <silent> <F7> :TagbarToggle<CR>
 noremap <C-F> :Ack<space>
 noremap <C-p> :FZF<CR>
+noremap <C-t> :tabnew<CR>
+noremap <C-Left> :tabprevious<CR>
+noremap <C-Right> :tabnext<CR>
+
