@@ -34,6 +34,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 let mapleader=","
+set hls
 
 set background=dark
 colorscheme hybrid_material
@@ -69,7 +70,8 @@ let g:vdebug_options = {'port': '9999'}
 nnoremap <silent> <S-Right> :bnext<CR>
 nnoremap <silent> <S-Left> :bprevious<CR>
 nnoremap <silent> <F7> :TagbarToggle<CR>
-noremap <C-F> :Ack<space>
+noremap <C-f> :Ack<space>
+noremap <C-S-f> :Ack <cword><CR>
 noremap <C-p> :FZF<CR>
 noremap <C-t> :tabnew<CR>
 noremap <C-Left> :tabprevious<CR>
