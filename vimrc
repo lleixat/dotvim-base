@@ -6,16 +6,20 @@ Plug 'mhinz/vim-signify'
 Plug 'ervandew/supertab'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'majutsushi/tagbar'
-Plug 'joonty/vdebug'
+if	has('python3')
+    Plug 'joonty/vdebug'
+endif
 Plug 'jiangmiao/auto-pairs'
 Plug 'qbbr/vim-symfony'
-Plug 'SirVer/ultisnips'
+
+if v:version > 704
+    Plug 'SirVer/ultisnips'
+endif
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'ap/vim-buftabline'
-Plug 'joonty/vdebug'
 
 Plug 'kristijanhusak/vim-hybrid-material'
 
@@ -28,22 +32,8 @@ Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
-set mouse=a
-set nu
-set tabstop=4
-set shiftwidth=4
-set expandtab
-let mapleader=","
-set hls
-
-set background=dark
-colorscheme hybrid_material
-
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
+" Base config
+source ~/.vim/etc/base.vim
 
 if executable('ag')
       let g:ackprg = 'ag --vimgrep'
@@ -61,19 +51,8 @@ let g:fzf_layout = { 'down': '30%' }
 let g:SuperTabDefaultCompletionType = ""
 
 " Vdebug
-let g:vdebug_options = {'ide_key': 'PHPSTORM'}
-let g:vdebug_options = {'break_on_open': 0}
-let g:vdebug_options = {'server': '127.0.0.1'}
-let g:vdebug_options = {'port': '9999'}
+source ~/.vim/etc/vdebug.vim
 
 " Remaps
-nnoremap <silent> <S-Right> :bnext<CR>
-nnoremap <silent> <S-Left> :bprevious<CR>
-nnoremap <silent> <F7> :TagbarToggle<CR>
-noremap <C-f> :Ack<space>
-noremap <C-S-f> :Ack <cword><CR>
-noremap <C-p> :FZF<CR>
-noremap <C-t> :tabnew<CR>
-noremap <C-Left> :tabprevious<CR>
-noremap <C-Right> :tabnext<CR>
+source ~/.vim/etc/remaps.vim
 
