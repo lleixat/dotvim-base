@@ -6,6 +6,8 @@ set shiftwidth=4
 set expandtab
 let mapleader=","
 set hls
+set splitright
+set splitbelow
 
 set background=dark
 colorscheme hybrid_material
