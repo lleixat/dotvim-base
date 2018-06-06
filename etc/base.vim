@@ -12,10 +12,12 @@ set splitbelow
 set background=dark
 colorscheme hybrid_material
 
-if v:version > 704
-    augroup numbertoggle
-        autocmd!
-        autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    if v:version > 704
         autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-    augroup END
-endif
+    else
+        autocmd BufLeave,FocusLost,InsertEnter   * set number
+    endif
+augroup END
