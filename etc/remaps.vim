@@ -44,3 +44,6 @@ map ^[[B <C-Down>
 map ^[[D <C-Left>
 map ^[[C <C-Right>
 " }}}
+
+" YankRing
+nnoremap <silent> <C-Y> :YRShow<CR>

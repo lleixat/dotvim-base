@@ -18,6 +18,7 @@ endif
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/YankRing.vim'
 
 Plug 'ap/vim-buftabline'
 
