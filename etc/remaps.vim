@@ -47,3 +47,11 @@ map ^[[C <C-Right>
 
 " YankRing
 nnoremap <silent> <C-Y> :YRShow<CR>
+
+" EasyAlign
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)"
+

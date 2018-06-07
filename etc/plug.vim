@@ -30,6 +30,8 @@ Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
+Plug 'vim-scripts/apachestyle'
+Plug 'junegunn/vim-easy-align'
 
 
 call plug#end()
