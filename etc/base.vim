@@ -1,5 +1,6 @@
 " Base config
 set mouse=a
+set ttymouse=a
 set nu
 set tabstop=4
 set shiftwidth=4
