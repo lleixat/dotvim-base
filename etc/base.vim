@@ -1,6 +1,7 @@
 " Base config
+set ttyfast
 set mouse=a
-set ttymouse=a
+set ttymouse=xterm2
 set nu
 set tabstop=4
 set shiftwidth=4
@@ -17,8 +18,8 @@ augroup numbertoggle
     autocmd!
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
     if v:version > 704
-        autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+        autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
     else
-        autocmd BufLeave,FocusLost,InsertEnter   * set number
+        autocmd BufLeave,FocusLost,InsertEnter * set number
     endif
 augroup END
