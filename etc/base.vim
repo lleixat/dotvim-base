@@ -2,6 +2,7 @@
 set ttyfast
 set mouse=a
 set ttymouse=xterm2
+set term=screen-256color
 set nu
 set tabstop=4
 set shiftwidth=4
