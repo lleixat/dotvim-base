@@ -32,6 +32,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/apachestyle'
 Plug 'junegunn/vim-easy-align'
+Plug 'martinda/Jenkinsfile-vim-syntax'
 
 
 call plug#end()
