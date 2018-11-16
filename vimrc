@@ -15,10 +15,11 @@ exe "source" . g:portable . '/etc/plug.vim'
 
 " Base config
 exe "source" . g:portable . '/etc/base.vim'
+exe "source" . g:portable . '/etc/syntastic.vim'
 
 if executable('ag')
-      let g:ackprg = 'ag --vimgrep'
-  endif
+    let g:ackprg = 'ag --vimgrep'
+endif
 
 let g:UltiSnipsEditSplit="vertical"
 

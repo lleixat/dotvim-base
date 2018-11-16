@@ -56,4 +56,5 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)"
 
 " NERDTreeToggle
-nmap <F12> :NERDTreeToggle<CR>
+nmap <F12> :NERDTreeToggle<cr>
+nmap <S-F12> :NERDTreeFind<cr>
