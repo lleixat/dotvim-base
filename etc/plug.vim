@@ -6,9 +6,10 @@ Plug 'mhinz/vim-signify'
 Plug 'ervandew/supertab'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'majutsushi/tagbar'
-if	has('python3')
+if has('python3')
     Plug 'joonty/vdebug'
 endif
+Plug 'AndrewRadev/switch.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'qbbr/vim-symfony'
 
