@@ -15,16 +15,17 @@ exe "source" . g:portable . '/etc/plug.vim'
 
 " Base config
 exe "source" . g:portable . '/etc/base.vim'
+exe "source" . g:portable . '/etc/syntastic.vim'
 
 if executable('ag')
-      let g:ackprg = 'ag --vimgrep'
-  endif
+    let g:ackprg = 'ag --vimgrep'
+endif
 
 let g:UltiSnipsEditSplit="vertical"
 
 let g:airline_theme = "lucius"
 let g:airline_section_a = '%{hostname()}'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 let g:fzf_layout = { 'down': '30%' }
 
@@ -32,7 +33,7 @@ let g:fzf_layout = { 'down': '30%' }
 let g:SuperTabDefaultCompletionType = ""
 
 " Vdebug
-exe "source" . g:portable . '/etc/vdebug.vim'
+exe "source " . g:portable . '/etc/vdebug.vim'
 
 " Remaps
-exe "source" . g:portable . '/etc/remaps.vim'
+exe "source " . g:portable . '/etc/remaps.vim'

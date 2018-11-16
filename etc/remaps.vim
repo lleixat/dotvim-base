@@ -55,3 +55,5 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)"
 
+nmap <F12> :NERDTreeToggle<cr>
+nmap <C-F12> :NERDTreeFind<cr>

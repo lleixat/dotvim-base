@@ -2,11 +2,14 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
+if has('clientserver')
+    Plug 'idbrii/AsyncCommand'
+endif
 
 Plug 'ervandew/supertab'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'majutsushi/tagbar'
-if	has('python3')
+if has('python3')
     Plug 'joonty/vdebug'
 endif
 Plug 'jiangmiao/auto-pairs'
@@ -16,6 +19,7 @@ if v:version > 704
     Plug 'SirVer/ultisnips'
 endif
 
+Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/YankRing.vim'
@@ -29,9 +33,12 @@ Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/apachestyle'
 Plug 'junegunn/vim-easy-align'
+Plug 'tomtom/checksyntax_vim'
+Plug 'tomtom/tlib_vim'
 
 
 call plug#end()
