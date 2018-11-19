@@ -1,13 +1,13 @@
 let g:NERDTreeIndicatorMapCustom = {
-            \ "Modified"  : "✹",
-            \ "Staged"    : "✚",
-            \ "Untracked" : "✭",
-            \ "Renamed"   : "➜",
+            \ "Modified"  : "±",
+            \ "Staged"    : "+",
+            \ "Untracked" : "!",
+            \ "Renamed"   : "~",
             \ "Unmerged"  : "═",
             \ "Deleted"   : "×",
             \ "Dirty"     : "✗",
             \ "Clean"     : "✔︎",
-            \ "Ignored"   : "☒",
+            \ "Ignored"   : "^",
             \ "Unknown"   : "?"
             \ }
 

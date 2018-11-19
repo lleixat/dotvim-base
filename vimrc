@@ -38,5 +38,8 @@ exe "source " . g:portable . '/etc/vdebug.vim'
 " Switch definitions
 exe "source " . g:portable . '/etc/switch_definitions.vim'
 
+" NerdTree
+exe "source " . g:portable . '/etc/nerdtree.vim'
+
 " Remaps
 exe "source " . g:portable . '/etc/remaps.vim'
