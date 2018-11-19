@@ -58,3 +58,6 @@ nmap ga <Plug>(EasyAlign)"
 " NERDTreeToggle
 nmap <F12> :NERDTreeToggle<cr>
 nmap <S-F12> :NERDTreeFind<cr>
+
+" Switch
+nmap - :Switch<cr>

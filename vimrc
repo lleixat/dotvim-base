@@ -35,5 +35,8 @@ let g:SuperTabDefaultCompletionType = ""
 " Vdebug
 exe "source " . g:portable . '/etc/vdebug.vim'
 
+" Switch definitions
+exe "source " . g:portable . '/etc/switch_definitions.vim'
+
 " Remaps
 exe "source " . g:portable . '/etc/remaps.vim'
