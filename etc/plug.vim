@@ -7,14 +7,16 @@ if has('clientserver')
 endif
 
 Plug 'ervandew/supertab'
-Plug 'shawncplus/phpcomplete.vim'
 Plug 'majutsushi/tagbar'
 if has('python3')
     Plug 'joonty/vdebug'
+    Plug 'nvie/vim-flake8'
+    Plug 'valloric/youcompleteme'
 endif
 Plug 'AndrewRadev/switch.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'qbbr/vim-symfony'
+Plug 'godlygeek/tabular'
 
 if v:version > 704
     Plug 'SirVer/ultisnips'
@@ -41,5 +43,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'tomtom/checksyntax_vim'
 Plug 'tomtom/tlib_vim'
 Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'mechatroner/rainbow_csv'
 
 call plug#end()

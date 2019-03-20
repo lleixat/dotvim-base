@@ -13,7 +13,7 @@ set splitright
 set splitbelow
 
 set background=dark
-colorscheme hybrid_material
+silent! colorscheme hybrid_material
 
 augroup numbertoggle
     autocmd!
