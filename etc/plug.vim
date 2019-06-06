@@ -28,10 +28,15 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'chrisbra/Colorizer'
+
 Plug 'ap/vim-buftabline'
 
 Plug 'kristijanhusak/vim-hybrid-material'
 
+Plug 'sharat87/roast.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -44,5 +49,6 @@ Plug 'tomtom/checksyntax_vim'
 Plug 'tomtom/tlib_vim'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'mechatroner/rainbow_csv'
+Plug 'mzlogin/vim-markdown-toc'
 
 call plug#end()

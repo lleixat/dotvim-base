@@ -9,6 +9,8 @@ let g:portable = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 " add the directory to 'runtimepath'
 let &runtimepath = printf('%s,%s,%s/after', g:portable, &runtimepath, g:portable)
 
+" Keypad VS PUTTY
+exe "source" . g:portable . '/etc/keypad-integration.vim'
 
 " Plug
 exe "source" . g:portable . '/etc/plug.vim'
@@ -38,8 +40,14 @@ exe "source " . g:portable . '/etc/vdebug.vim'
 " Switch definitions
 exe "source " . g:portable . '/etc/switch_definitions.vim'
 
+" ultisnips
+exe "source " . g:portable . '/etc/ultisnips.vim'
+
 " NerdTree
 exe "source " . g:portable . '/etc/nerdtree.vim'
 
 " Remaps
 exe "source " . g:portable . '/etc/remaps.vim'
+
+" Helpers
+exe "source " . g:portable . '/etc/helpers.vim'
