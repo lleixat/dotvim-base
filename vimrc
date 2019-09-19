@@ -26,8 +26,9 @@ endif
 let g:UltiSnipsEditSplit="vertical"
 
 let g:airline_theme = "lucius"
-let g:airline_section_a = '%{hostname()}'
+" let g:airline_section_a = '%{echo $hostname()}'
 let g:airline_powerline_fonts = 0
+let g:airline#extensions#tagbar#enabled = 1
 
 let g:fzf_layout = { 'down': '30%' }
 
@@ -45,6 +46,17 @@ exe "source " . g:portable . '/etc/ultisnips.vim'
 
 " NerdTree
 exe "source " . g:portable . '/etc/nerdtree.vim'
+
+" TagBar
+exe "source " . g:portable . '/etc/tagbar.vim'
+
+" TSlime
+if executable("tmux") > 0
+    exe "source " . g:portable . '/etc/tslime.vim'
+endif
+
+" Binary & Hex mode
+exe "source " . g:portable . '/etc/hexmode.vim'
 
 " Remaps
 exe "source " . g:portable . '/etc/remaps.vim'

@@ -7,8 +7,8 @@ cmap w!! w !sudo tee > /dev/null %
 nnoremap <silent> <S-Right> :bnext<CR>
 nnoremap <silent> <S-Left> :bprevious<CR>
 noremap <C-t> :tabnew<CR>
-noremap <C-Left> :tabprevious<CR>
-noremap <C-Right> :tabnext<CR>
+noremap <S-Left> :tabprevious<CR>
+noremap <S-Right> :tabnext<CR>
 
 " Tagbar
 nnoremap <silent> <F7> :TagbarToggle<CR>
@@ -47,6 +47,7 @@ map ^[[C <C-Right>
 
 " YankRing
 nnoremap <silent> <C-Y> :YRShow<CR>
+nnoremap <silent> <C-P> :CtrlP<CR>
 
 " EasyAlign
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -61,3 +62,7 @@ nmap <S-F12> :NERDTreeFind<cr>
 
 " Switch
 nmap - :Switch<cr>
+
+" Buffers
+nmap <S-Right> :bnext<cr>
+nmap <S-Left> :bprevious<cr>

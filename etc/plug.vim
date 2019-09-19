@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
+Plug 'will133/vim-dirdiff'
 Plug 'mhinz/vim-signify'
 if has('clientserver')
     Plug 'idbrii/AsyncCommand'
@@ -20,23 +21,30 @@ Plug 'godlygeek/tabular'
 
 if v:version > 704
     Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
 endif
 
+Plug 'vim-scripts/YankRing.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'sgur/ctrlp-extensions.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/YankRing.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'janko/vim-test'
+if executable('tmux') > 0
+    Plug 'jgdavey/tslime.vim'
+endif
 
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'chrisbra/Colorizer'
 
 Plug 'ap/vim-buftabline'
 
 Plug 'kristijanhusak/vim-hybrid-material'
 
-Plug 'sharat87/roast.vim'
+if has('python3')
+    Plug 'sharat87/roast.vim'
+endif
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
