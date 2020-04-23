@@ -9,19 +9,28 @@ let g:portable = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 " add the directory to 'runtimepath'
 let &runtimepath = printf('%s,%s,%s/after', g:portable, &runtimepath, g:portable)
 
-" Keypad VS PUTTY
-exe "source" . g:portable . '/etc/keypad-integration.vim'
+exe "source " . g:portable . "/etc/plug.vim"
 
-" Plug
-exe "source" . g:portable . '/etc/plug.vim'
+let g:custom_plugs = {
+            \ 'keypad-integration': 'Keypad VS PUTTY',
+            \ 'base': 'Base config',
+            \ 'syntastic': 'Syntax checker',
+            \ 'vdebug': 'Debug tools',
+            \ 'switch_definitions': 'Handy switch/loop ',
+            \ 'ultisnips': 'Snippets integration',
+            \ 'nerdtree': 'Tree view',
+            \ 'tagbar': 'Overview',
+            \ 'tslime': 'Tmux ♥ Vim',
+            \ 'hexmode': 'Roxxorrr mode',
+            \ 'remaps': 'Key map',
+            \ 'helpers': 'Day to day work',
+            \ }
 
-" Base config
-exe "source" . g:portable . '/etc/base.vim'
-exe "source" . g:portable . '/etc/syntastic.vim'
-
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
-endif
+" Loading
+for f in keys(g:custom_plugs)
+    silent echom "Loading: ". g:custom_plugs[f]
+    exe "source ". g:portable . "/etc/" . f . ".vim"
+endfor
 
 let g:UltiSnipsEditSplit="vertical"
 
@@ -35,31 +44,8 @@ let g:fzf_layout = { 'down': '30%' }
 " Super tab
 let g:SuperTabDefaultCompletionType = ""
 
-" Vdebug
-exe "source " . g:portable . '/etc/vdebug.vim'
-
-" Switch definitions
-exe "source " . g:portable . '/etc/switch_definitions.vim'
-
-" ultisnips
-exe "source " . g:portable . '/etc/ultisnips.vim'
-
-" NerdTree
-exe "source " . g:portable . '/etc/nerdtree.vim'
-
-" TagBar
-exe "source " . g:portable . '/etc/tagbar.vim'
-
 " TSlime
-if executable("tmux") > 0
-    exe "source " . g:portable . '/etc/tslime.vim'
-endif
+"if executable("tmux") > 0
+"    exe "source " . g:portable . '/etc/tslime.vim'
+"endif
 
-" Binary & Hex mode
-exe "source " . g:portable . '/etc/hexmode.vim'
-
-" Remaps
-exe "source " . g:portable . '/etc/remaps.vim'
-
-" Helpers
-exe "source " . g:portable . '/etc/helpers.vim'

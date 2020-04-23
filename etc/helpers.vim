@@ -17,3 +17,31 @@ endfunc
 command! -range OnboardingFormatEmailList <line1>,<line2>call EmailListToJsonDict()
 
 
+func! OnboardThis ()
+    :cexpr system(g:portable . '/bin/sq_onboard.sh' . ' ' . shellescape(expand('%')))
+endfunc
+
+command! OnboardThis :call OnboardThis()
+
+
+"
+" Auto enable paste mode on paste
+"
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
+
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+autocmd BufWritePre * :call TrimWhitespace()

@@ -165,5 +165,21 @@ autocmd FileType javascript,js let b:switch_custom_definitions = [
             \ ]
 "}}}
 
+" -----------------------------------------------------------------------------
+" [Python] Definitions {{{
+" -----------------------------------------------------------------------------
+autocmd FileType python let b:switch_custom_definitions = [
+            \   {
+            \    'True': 'False',
+            \    'False': 'None',
+            \    'None': 'True',
+            \   },
+            \   {
+            \    'dict()': 'list()',
+            \    'list()': 'str()',
+            \    'str()': 'dict()',
+            \   },
+            \ ]
+"}}}
 
 
