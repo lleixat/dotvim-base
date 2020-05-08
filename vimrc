@@ -38,6 +38,7 @@ let g:airline_theme = "lucius"
 " let g:airline_section_a = '%{echo $hostname()}'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#bufferline#enabled = 1
 au WinEnter,BufWinEnter __vial_* let w:airline_disabled=1
 
 let g:fzf_layout = { 'down': '30%' }

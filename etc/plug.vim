@@ -25,7 +25,6 @@ Plug 'AndrewRadev/linediff.vim'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'AndrewRadev/inline_edit.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'qbbr/vim-symfony'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
@@ -38,8 +37,6 @@ endif
 Plug 'vim-scripts/YankRing.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sgur/ctrlp-extensions.vim'
-"Plug 'vim-syntastic/syntastic'
-Plug 'dense-analysis/ale'
 Plug 't9md/vim-quickhl'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -52,8 +49,6 @@ if executable('tmux') > 0
 endif
 
 Plug 'chrisbra/Colorizer'
-
-Plug 'ap/vim-buftabline'
 
 Plug 'kristijanhusak/vim-hybrid-material'
 
@@ -83,7 +78,6 @@ Plug 'dhruvasagar/vim-zoom'
 Plug 'tokozedg/vim-sman'
 
 " Use release branch (Recommend)
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}"
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
