@@ -22,8 +22,9 @@ set background=dark
 silent! colorscheme hybrid_material
 
 augroup numbertoggle
+    let ft2Ignore=['nerdtree', 'taglist']
     autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufEnter,FocusGained,InsertLeave * if index(ft2Ignore, &ft) < 0 | set relativenumber
     if v:version > 704
         autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
     else
@@ -46,9 +47,6 @@ set cursorline
 set list
 noremap <F1> :set list!<CR>
 
-" Disable line num
-:autocmd FileType nerdtree set norelativenumber
-:autocmd FileType taglist set norelativenumber
 
 " fugitive tags
 :set tags^=./.git/tags;
