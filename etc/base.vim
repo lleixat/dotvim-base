@@ -22,7 +22,7 @@ set background=dark
 silent! colorscheme hybrid_material
 
 augroup numbertoggle
-    let ft2Ignore=['nerdtree', 'taglist']
+    let ft2Ignore=['nerdtree', 'taglist', 'tagbar']
     autocmd!
     autocmd BufEnter,FocusGained,InsertLeave * if index(ft2Ignore, &ft) < 0 | set relativenumber
     if v:version > 704
