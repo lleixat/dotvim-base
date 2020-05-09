@@ -12,10 +12,12 @@
 "            \ }
 
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeDirArrows = 1
+"let g:NERDTreeDirArrows = 1
 
-let g:NERDTreeDirArrowExpandable = "›"
-let g:NERDTreeDirArrowCollapsible = "-"
+"let g:NERDTreeDirArrowExpandable = "›"
+"let g:NERDTreeDirArrowCollapsible = "-"
+let g:NERDTreeDirArrowExpandable = ""
+let g:NERDTreeDirArrowCollapsible = ""
 
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -29,3 +31,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
+
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeQuitOnOpen = 1
