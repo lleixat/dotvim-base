@@ -14,6 +14,7 @@ exe "source " . g:portable . "/etc/plug.vim"
 let g:custom_plugs = {
             \ 'keypad-integration': 'Keypad VS PUTTY',
             \ 'base': 'Base config',
+            \ 'binary': 'Binary handeling',
             \ 'syntastic': 'Syntax checker',
             \ 'vdebug': 'Debug tools',
             \ 'switch_definitions': 'Handy switch/loop ',

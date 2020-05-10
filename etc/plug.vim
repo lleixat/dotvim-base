@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin(g:portable . '/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'will133/vim-dirdiff'
@@ -9,6 +9,7 @@ endif
 
 Plug 'ervandew/supertab'
 Plug 'majutsushi/tagbar'
+Plug 'misterbuckley/vim-definitive'
 if has('python3')
     Plug 'joonty/vdebug'
     "Plug 'valloric/youcompleteme'

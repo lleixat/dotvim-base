@@ -89,3 +89,5 @@ let g:quickhl_manual_colors = [
 " Gundo
 nnoremap <F8> :GundoToggle<CR>
 
+" FindDefinition
+nnoremap <Leader>d :SFindDefinition<CR>
