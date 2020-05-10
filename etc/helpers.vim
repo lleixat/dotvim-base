@@ -68,4 +68,13 @@ command -nargs=1 -complete=file -bar CleverOpen :call OpenInSplitIfBufferDirty(<
 
 command! PlugEdit :call OpenInSplitIfBufferDirty(g:plug_file)
 command! VimEdit :call OpenInSplitIfBufferDirty(g:portable . '/vimrc')
+command! EnvEdit :call OpenInSplitIfBufferDirty($HOME . '/.oh-my-zsh/custom/environment.zsh')
 
+
+let g:bootstrap_env_folder = $HOME . "/bootstrap"
+" TODO: improve target detection (based on file type?)
+function Push2Bootstrap()
+    system('cp ' . expand('%:p') . g:bootstrap_env_folder)
+    echom "(WIP) Pushed to " . g:bootstrap_env_folder
+endfunction
+command! Push2Bootstrap p:call Push2Bootstrap()

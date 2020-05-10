@@ -12,13 +12,6 @@ Plug 'majutsushi/tagbar'
 Plug 'misterbuckley/vim-definitive'
 if has('python3')
     Plug 'joonty/vdebug'
-    "Plug 'valloric/youcompleteme'
-    "Plug 'mattn/vim-lsp-settings'
-    "Plug 'ryanolsonx/vim-lsp-python'
-    "Plug 'prabirshrestha/asyncomplete.vim'
-    "Plug 'prabirshrestha/async.vim'
-    "Plug 'prabirshrestha/vim-lsp'
-    "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 endif
 Plug 'AndrewRadev/switch.vim'
 Plug 'AndrewRadev/splitjoin.vim'
