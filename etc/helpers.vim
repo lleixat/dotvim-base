@@ -78,3 +78,7 @@ function Push2Bootstrap()
     echom "(WIP) Pushed to " . g:bootstrap_env_folder
 endfunction
 command! Push2Bootstrap p:call Push2Bootstrap()
+
+command! PlugEdit :call OpenInSplitIfBufferDirty(g:plug_file)
+
+autocmd FileType ansible-vault exec "!ansible-vault edit %"

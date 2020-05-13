@@ -55,3 +55,34 @@ noremap <F1> :set list!<CR>
 imap <c-space> <Plug>(asyncomplete_force_refresh)
 
 let g:gundo_prefer_python3 = 1
+
+:hi DiffDelete ctermbg=236 ctermfg=238
+
+let g:UltiSnipsEditSplit="vertical"
+
+" let g:airline_section_a = '%{echo $hostname()}'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#bufferline#enabled = 1
+let g:airline_skip_empty_sections = 1
+let g:airline_theme = "lucius"
+au WinEnter,BufWinEnter __vial_* let w:airline_disabled=1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+
+
+let g:fzf_layout = { 'down': '30%' }
+
+" Super tab
+let g:SuperTabDefaultCompletionType = ""
+
+" TSlime
+"if executable("tmux") > 0
+"    exe "source " . g:portable . '/etc/tslime.vim'
+"endif
+
+let g:gist_api_url = 'https://github.airbus.corp/api/v3'
+set ttimeoutlen=10
+

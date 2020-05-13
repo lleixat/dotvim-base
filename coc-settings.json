@@ -1,0 +1,117 @@
+{
+    "languageserver": {
+        "dls": {
+            "command": "diagnostic-languageserver",
+            "args": ["--stdio"],
+            "filetypes": [ "sh", "email", "dart" ],
+            "initializationOptions": {
+                "linters": {
+                    "pylint": {
+                        "sourceName": "pylint",
+                        "command": "pylint",
+                        "args": [
+                            "--output-format",
+                            "text",
+                            "--score",
+                            "no",
+                            "--msg-template",
+                            "'{line}:{column}:{category}:{msg} ({msg_id}:{symbol})'",
+                            "%file"
+                        ],
+                        "formatPattern": [
+                            "^(\\d+?):(\\d+?):([a-z]+?):(.*)$",
+                            {
+                                "line": 1,
+                                "column": 2,
+                                "security": 3,
+                                "message": 4
+                            }
+                        ],
+                        "securities": {
+                            "informational": "hint",
+                            "refactor": "info",
+                            "convention": "info",
+                            "warning": "warning",
+                            "error": "error",
+                            "fatal": "error"
+                        },
+                        "offsetColumn": 1,
+                        "formatLines": 1
+                    },
+                    "markdownlint": {
+                        "command": "markdownlint",
+                        "isStderr": true,
+                        "debounce": 100,
+                        "args": [ "--stdin" ],
+                        "offsetLine": 0,
+                        "offsetColumn": 0,
+                        "sourceName": "markdownlint",
+                        "formatLines": 1,
+                        "formatPattern": [
+                            "^.*?:\\s+(\\d+):\\s+(.*)(\\r|\\n)*$",
+                            {
+                                "line": 1,
+                                "column": -1,
+                                "message": 2
+                            }
+                        ]
+                    },
+                    "shellcheck": {
+                        "command": "shellcheck",
+                        "debounce": 100,
+                        "args": [
+                            "--format",
+                            "json",
+                            "-"
+                        ],
+                        "sourceName": "shellcheck",
+                        "parseJson": {
+                            "line": "line",
+                            "column": "column",
+                            "endLine": "endLine",
+                            "endColumn": "endColumn",
+                            "message": "${message} [${code}]",
+                            "security": "level"
+                        },
+                        "securities": {
+                            "error": "error",
+                            "warning": "warning",
+                            "info": "info",
+                            "style": "hint"
+                        }
+                    },
+                    "languagetool": {
+                        "command": "languagetool",
+                        "debounce": 200,
+                        "args": ["-"],
+                        "offsetLine": 0,
+                        "offsetColumn": 0,
+                        "sourceName": "languagetool",
+                        "formatLines": 2,
+                        "formatPattern": [
+                            "^\\d+?\\.\\)\\s+Line\\s+(\\d+),\\s+column\\s+(\\d+),\\s+([^\\n]+)\nMessage:\\s+(.*)$",
+                            {
+                                "line": 1,
+                                "column": 2,
+                                "message": [4, 3]
+                            }
+                        ],
+                    }
+                },
+                "formatters": {
+                    "dartfmt": {
+                        "command": "dartfmt",
+                        "args": [ "--fix" ],
+                    }
+                },
+                "filetypes": {
+                    "sh": "shellcheck",
+                    "email": "languagetool"
+                },
+                "formatFiletypes": {
+                    "dart": "dartfmt"
+                }
+            }
+        }
+    }
+}

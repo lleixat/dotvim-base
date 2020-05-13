@@ -25,6 +25,7 @@ let g:custom_plugs = {
             \ 'hexmode': 'Roxxorrr mode',
             \ 'remaps': 'Key map',
             \ 'helpers': 'Day to day work',
+            \ 'ansible': 'Ansible',
             \ }
 
 " Loading
@@ -32,23 +33,4 @@ for f in keys(g:custom_plugs)
     silent echom "Loading: ". g:custom_plugs[f]
     exe "source ". g:portable . "/etc/" . f . ".vim"
 endfor
-
-let g:UltiSnipsEditSplit="vertical"
-
-let g:airline_theme = "lucius"
-" let g:airline_section_a = '%{echo $hostname()}'
-let g:airline_powerline_fonts = 0
-let g:airline#extensions#tagbar#enabled = 1
-let g:airline#extensions#bufferline#enabled = 1
-au WinEnter,BufWinEnter __vial_* let w:airline_disabled=1
-
-let g:fzf_layout = { 'down': '30%' }
-
-" Super tab
-let g:SuperTabDefaultCompletionType = ""
-
-" TSlime
-"if executable("tmux") > 0
-"    exe "source " . g:portable . '/etc/tslime.vim'
-"endif
 

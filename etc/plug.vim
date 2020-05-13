@@ -21,7 +21,7 @@ Plug 'AndrewRadev/inline_edit.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-
+Plug 'pearofducks/ansible-vim'
 
 if v:version > 704
     Plug 'SirVer/ultisnips'
@@ -34,6 +34,7 @@ Plug 'sgur/ctrlp-extensions.vim'
 Plug 't9md/vim-quickhl'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jmcantrell/vim-virtualenv'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko/vim-test'
 if executable('tmux') > 0
@@ -75,5 +76,8 @@ Plug 'tokozedg/vim-sman'
 
 " Use release branch (Recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 
 call plug#end()
