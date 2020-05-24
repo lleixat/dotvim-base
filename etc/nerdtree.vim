@@ -34,3 +34,5 @@ let g:NERDTreeIndicatorMapCustom = {
 
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 0
+
+let NERDTreeIgnore = ['\.pyc$','\~$','\.swp$']
