@@ -92,6 +92,6 @@ nnoremap <F8> :GundoToggle<CR>
 " FindDefinition
 nnoremap <Leader>d :SFindDefinition<CR>
 
-let g:UltiSnipsJumpForwardTrigger="<c-k>"
-let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+"let g:UltiSnipsJumpForwardTrigger="<C-K>"
+"let g:UltiSnipsJumpBackwardTrigger="<C-J>"
 

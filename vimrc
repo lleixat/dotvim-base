@@ -21,6 +21,7 @@ let g:custom_plugs = {
             \ 'ultisnips': 'Snippets integration',
             \ 'nerdtree': 'Tree view',
             \ 'tagbar': 'Overview',
+            \ 'tagbar_types': 'Tagbar ctags types',
             \ 'tslime': 'Tmux ♥ Vim',
             \ 'hexmode': 'Roxxorrr mode',
             \ 'remaps': 'Key map',

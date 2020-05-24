@@ -3,3 +3,55 @@ snippet file "Insert current file path"
 # file : `!v @%`
 endsnippet
 
+
+snippet info "Gather infos" b
+- name: "Gather ${1:EC2} info"
+  become: false
+  ${2:`!p snip.rv = t[1].lower()`_${3:instance}}_info:
+    region: "{{ region }}"
+    filters:
+      'tag:Name': "{{ app_instances_name }}"
+      'tag:app:version': "{{ sq_version_number }}"
+      'tag:app:name': "{{ app_name }}"
+      'tag:app:edition': "{{ sq_edition }}"
+      'tag:airbus:environment': "{{ airbus_env }}"
+  register: ${4:`!p snip.rv = t[1].lower()`_info}
+  tags:
+    - `!p snip.rv = t[1].lower()`
+    ${5:- ${0}}
+
+endsnippet
+
+snippet debug "Inset debug block" b
+- debug:
+    msg: "{{ ${0} }}"
+
+endsnippet
+
+snippet var "Inset debug block" b
+- debug: var=${0}
+
+endsnippet
+
+snippet reg "register: stuff" b
+register: ${0:myvar}
+endsnippet
+
+snippet end "Insert meta end_play" b
+- meta: end_play
+
+endsnippet
+
+snippet when "Insert when" b
+when: ${1:var1} ${2:!=} ${3:var2}
+endsnippet
+
+snippet name "Name" b
+- name: "${0}"
+endsnippet
+
+snippet "(\w+).res" "resut[0]" r
+`!p snip.rv = match.group(1)`.results[0].${0}
+endsnippet
+
+

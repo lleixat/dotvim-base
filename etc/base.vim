@@ -49,7 +49,7 @@ noremap <F1> :set list!<CR>
 
 
 " fugitive tags
-:set tags^=./.git/tags;
+":set tags^=./.git/tags;
 
 
 imap <c-space> <Plug>(asyncomplete_force_refresh)
@@ -86,3 +86,5 @@ let g:SuperTabDefaultCompletionType = ""
 let g:gist_api_url = 'https://github.airbus.corp/api/v3'
 set ttimeoutlen=10
 
+" mapping is set for gtags
+let g:gen_tags#gtags_default_map=1
