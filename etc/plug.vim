@@ -9,6 +9,7 @@ endif
 
 Plug 'ervandew/supertab'
 Plug 'majutsushi/tagbar'
+Plug 'jsfaint/gen_tags.vim'
 Plug 'misterbuckley/vim-definitive'
 if has('python3')
     Plug 'joonty/vdebug'
