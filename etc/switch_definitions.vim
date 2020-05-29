@@ -61,6 +61,18 @@ let g:switch_custom_definitions = [
             \     'XXX': 'NOTE',
             \   },
             \   {
+            \     'ERROR': 'WARNING',
+            \     'WARNING': 'INFO',
+            \     'INFO': 'DEBUG',
+            \     'DEBUG': 'ERROR',
+            \   },
+            \   {
+            \     'error': 'warning',
+            \     'warning': 'info',
+            \     'info': 'debug',
+            \     'debug': 'error',
+            \   },
+            \   {
             \     '&&': '||',
             \     '||': '&&',
             \   },

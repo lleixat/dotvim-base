@@ -27,6 +27,7 @@ let g:custom_plugs = {
             \ 'remaps': 'Key map',
             \ 'helpers': 'Day to day work',
             \ 'ansible': 'Ansible',
+            \ 'test': 'Test config',
             \ }
 
 " Loading

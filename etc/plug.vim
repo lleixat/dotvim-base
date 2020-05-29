@@ -1,6 +1,7 @@
 call plug#begin(g:portable . '/plugged')
 
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-dispatch'
 Plug 'will133/vim-dirdiff'
 Plug 'mhinz/vim-signify'
 if has('clientserver')
@@ -12,7 +13,8 @@ Plug 'majutsushi/tagbar'
 Plug 'jsfaint/gen_tags.vim'
 Plug 'misterbuckley/vim-definitive'
 if has('python3')
-    Plug 'joonty/vdebug'
+    "Plug 'joonty/vdebug'
+    Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-bash --no-check-certificate'}
 endif
 Plug 'AndrewRadev/switch.vim'
 Plug 'AndrewRadev/splitjoin.vim'
