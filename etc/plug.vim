@@ -57,6 +57,7 @@ if has('python3')
 endif
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-abolish'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
@@ -82,5 +83,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
+Plug 'lleixat/vim-minimap'
 
 call plug#end()
