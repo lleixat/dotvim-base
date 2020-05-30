@@ -1,0 +1,5 @@
+snippet dump_dict_to_file "Dump dictionary to file" b
+import json
+with open('${1:.local/result.json}', 'w') as fp:
+    json.dump(${0}, fp)
+endsnippet

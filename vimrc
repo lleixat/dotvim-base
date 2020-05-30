@@ -12,27 +12,27 @@ let &runtimepath = printf('%s,%s,%s/after', g:portable, &runtimepath, g:portable
 exe "source " . g:portable . "/etc/plug.vim"
 
 let g:custom_plugs = {
-            \ 'keypad-integration': 'Keypad VS PUTTY',
+            \ 'keypad-integration': 'Keypad VS PUTTY (spoiler: Keypad win)',
             \ 'base': 'Base config',
             \ 'binary': 'Binary handeling',
             \ 'syntastic': 'Syntax checker',
             \ 'vdebug': 'Debug tools',
-            \ 'switch_definitions': 'Handy switch/loop ',
-            \ 'ultisnips': 'Snippets integration',
+            \ 'switch_definitions': 'Deliver switch goodies',
+            \ 'ultisnips': 'Snip Snap',
             \ 'nerdtree': 'Tree view',
             \ 'tagbar': 'Overview',
-            \ 'tagbar_types': 'Tagbar ctags types',
+            \ 'tagbar_types': 'Tag the Tree',
             \ 'tslime': 'Tmux ♥ Vim',
-            \ 'hexmode': 'Roxxorrr mode',
-            \ 'remaps': 'Key map',
+            \ 'hexmode': 'Roxxorrr mode: [ON]',
+            \ 'remaps': 'Fat fingers mode: [ON]',
             \ 'helpers': 'Day to day work',
-            \ 'ansible': 'Ansible',
-            \ 'test': 'Test config',
+            \ 'ansible': 'I am sAnsible',
+            \ 'test': 'Test your ass dude!',
             \ }
 
 " Loading
 for f in keys(g:custom_plugs)
-    silent echom "Loading: ". g:custom_plugs[f]
+    silent! echom "Loading: ". g:custom_plugs[f]
     exe "source ". g:portable . "/etc/" . f . ".vim"
 endfor
 

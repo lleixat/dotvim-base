@@ -1,4 +1,19 @@
 {
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.icon.enableVimDevicons": true,
+    "explorer.file.column.git.icon.modified": "✹",
+    "explorer.file.column.git.icon.added": "✚",
+    "explorer.file.column.git.icon.deleted": "",
+    "explorer.file.column.git.icon.copied": "",
+    "explorer.file.column.git.icon.renamed": "",
+    "explorer.file.column.git.icon.untracked": "✭",
+    "explorer.sources": [
+        { "name": "buffer", "expand": true },
+        { "name": "file", "expand": true }
+    ],
     "languageserver": {
         "dls": {
             "command": "diagnostic-languageserver",
@@ -95,13 +110,13 @@
                                 "column": 2,
                                 "message": [4, 3]
                             }
-                        ],
+                        ]
                     }
                 },
                 "formatters": {
                     "dartfmt": {
                         "command": "dartfmt",
-                        "args": [ "--fix" ],
+                        "args": [ "--fix" ]
                     }
                 },
                 "filetypes": {

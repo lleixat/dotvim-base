@@ -95,3 +95,4 @@ nnoremap <Leader>d :SFindDefinition<CR>
 "let g:UltiSnipsJumpForwardTrigger="<C-K>"
 "let g:UltiSnipsJumpBackwardTrigger="<C-J>"
 
+nmap <F12> :CocCommand explorer<CR>
