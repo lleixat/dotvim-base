@@ -27,16 +27,17 @@ command! OnboardThis :call OnboardThis()
 "
 " Auto enable paste mode on paste
 "
+
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
-
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 function! XTermPasteBegin()
   set pastetoggle=<Esc>[201~
   set paste
   return ""
 endfunction
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
@@ -57,7 +58,7 @@ command! PlugReload :call PlugReload()
 autocmd BufWritePost plug.vim PlugReload
 
 function! OpenInSplitIfBufferDirty(file)
-    if line('$') == 1 && getline(1) == ''
+    if line('$') == 1 && getline(1) = ''
         exec 'e' a:file
     else
         exec 'sp' a:file

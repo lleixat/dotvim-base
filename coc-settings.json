@@ -6,15 +6,29 @@
     "explorer.icon.enableVimDevicons": true,
     "explorer.file.column.git.icon.modified": "✹",
     "explorer.file.column.git.icon.added": "✚",
-    "explorer.file.column.git.icon.deleted": "",
+    "explorer.file.column.git.icon.deleted": "✖",
+    "explorer.file.column.git.icon.unmerged": "═",
     "explorer.file.column.git.icon.copied": "",
-    "explorer.file.column.git.icon.renamed": "",
+    "explorer.file.column.git.icon.renamed": "➜",
+    "explorer.file.column.git.icon.ignored": "☒",
     "explorer.file.column.git.icon.untracked": "✭",
     "explorer.sources": [
         { "name": "buffer", "expand": true },
         { "name": "file", "expand": true }
     ],
+    "explorer.openAction.strategy": "previousBuffer",
     "languageserver": {
+        "dockerfile": {
+            "command": "docker-langserver",
+            "filetypes": ["dockerfile"],
+            "args": ["--stdio"]
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"]
+        },
         "dls": {
             "command": "diagnostic-languageserver",
             "args": ["--stdio"],
@@ -75,6 +89,7 @@
                         "command": "shellcheck",
                         "debounce": 100,
                         "args": [
+                            "-x",
                             "--format",
                             "json",
                             "-"
@@ -128,5 +143,8 @@
                 }
             }
         }
-    }
+    },
+    "git.enableGutters": true,
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "bookmark.sign": ""
 }

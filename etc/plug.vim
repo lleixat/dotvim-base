@@ -84,5 +84,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'lleixat/vim-minimap'
+Plug 'thaerkh/vim-indentguides'
 
 call plug#end()

@@ -1,5 +1,7 @@
 " file: ~/.vim/etc/remaps.vim
 
+set pastetoggle=<F6>
+
 " Sudo thing
 cmap w!! w !sudo tee > /dev/null %
 
@@ -95,4 +97,6 @@ nnoremap <Leader>d :SFindDefinition<CR>
 "let g:UltiSnipsJumpForwardTrigger="<C-K>"
 "let g:UltiSnipsJumpBackwardTrigger="<C-J>"
 
-nmap <F12> :CocCommand explorer<CR>
+nmap <F12> :CocCommand explorer --toggle --sources=buffer+,file+<CR>
+nmap <C-m> :CocCommand<CR>
+nmap <C-L> :CocList<CR>

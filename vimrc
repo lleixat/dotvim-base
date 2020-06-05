@@ -27,7 +27,7 @@ let g:custom_plugs = {
             \ 'remaps': 'Fat fingers mode: [ON]',
             \ 'helpers': 'Day to day work',
             \ 'ansible': 'I am sAnsible',
-            \ 'test': 'Test your ass dude!',
+            \ 'testing': 'Test your ass dude!',
             \ }
 
 " Loading

@@ -3,3 +3,9 @@ import json
 with open('${1:.local/result.json}', 'w') as fp:
     json.dump(${0}, fp)
 endsnippet
+
+snippet test_ "set test" b
+@pytest.mark.parametrize("name,instance,ssl,token", sq_instances)
+def test_${1:cache_collector}(self, name, instance, ssl, token):
+	${0:pass}
+endsnippet

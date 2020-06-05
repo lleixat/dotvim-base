@@ -21,8 +21,11 @@ set termencoding=utf-8
 set background=dark
 silent! colorscheme hybrid_material
 
+
+let ft2Ignore=['nerdtree', 'taglist', 'tagbar', 'vim-minimap', 'qf', 'coc-explorer', 'list']
+
+" Remove line num for special ft
 augroup numbertoggle
-    let ft2Ignore=['nerdtree', 'taglist', 'tagbar', 'vim-minimap', 'qf', 'coc-explorer']
     autocmd!
     autocmd BufEnter,FocusGained,InsertLeave * if index(ft2Ignore, &ft) < 0 | set relativenumber
     if v:version > 704
@@ -70,7 +73,7 @@ au WinEnter,BufWinEnter __vial_* let w:airline_disabled=1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-let g:airline_symbols.space = "\ua0"
+"let g:airline_symbols.space = "\ua0"
 
 
 let g:fzf_layout = { 'down': '30%' }
@@ -88,3 +91,7 @@ set ttimeoutlen=10
 
 " mapping is set for gtags
 let g:gen_tags#gtags_default_map=1
+
+let g:indentguides_spacechar = ''
+let g:indentguides_tabchar = ''
+let g:indentguides_ignorelist = ft2Ignore
