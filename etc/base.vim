@@ -108,3 +108,6 @@ let g:gen_tags#gtags_default_map=1
 let g:indentguides_spacechar = ''
 let g:indentguides_tabchar = ''
 let g:indentguides_ignorelist = ft2Ignore
+
+" Coc
+let g:coc_disable_startup_warning = 1
