@@ -1,0 +1,17 @@
+global !p
+from uuid import uuid4
+endglobal
+
+
+snippet uuid "UUIDv4" w
+`!p if not snip.c: snip.rv = str(uuid4())`
+endsnippet
+
+
+snippet host
+Host ${1:`!p if not snip.c: snip.rv = str(uuid4())`}
+    HostName ${2:192.168.${3}}
+    User ${4}
+    Port ${5:2222}
+    IdentityFile ${0:~/.ssh/id_rsa}
+endsnippet
