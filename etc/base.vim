@@ -45,6 +45,20 @@ endif
 set cursorcolumn
 set cursorline
 
+" try to fix cursor shape
+if &term =~? 'rxvt' || &term =~? 'xterm' || &term =~? 'st-'
+        " 1 or 0 -> blinking block
+        " 2 -> solid block
+        " 3 -> blinking underscore
+        " 4 -> solid underscore
+        " Recent versions of xterm (282 or above) also support
+        " 5 -> blinking vertical bar
+        " 6 -> solid vertical bar
+        " Insert Mode
+        let &t_SI .= "\<Esc>[6 q"
+        " Normal Mode
+        let &t_EI .= "\<Esc>[2 q"
+endif
 
 "set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:🞄
 set list
@@ -86,7 +100,6 @@ let g:SuperTabDefaultCompletionType = ""
 "    exe "source " . g:portable . '/etc/tslime.vim'
 "endif
 
-let g:gist_api_url = 'https://github.airbus.corp/api/v3'
 set ttimeoutlen=10
 
 " mapping is set for gtags
