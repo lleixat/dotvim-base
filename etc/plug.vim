@@ -1,6 +1,7 @@
 call plug#begin(g:portable . '/plugged')
 
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'will133/vim-dirdiff'
 Plug 'mhinz/vim-signify'
@@ -72,6 +73,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'mechatroner/rainbow_csv'
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'sjl/gundo.vim'
 Plug 'dhruvasagar/vim-zoom'

@@ -58,10 +58,10 @@ command! PlugReload :call PlugReload()
 autocmd BufWritePost plug.vim PlugReload
 
 function! OpenInSplitIfBufferDirty(file)
-    if line('$') == 1 && getline(1) = ''
+    if line('$') == 1 && getline(1) == ''
         exec 'e' a:file
     else
-        exec 'sp' a:file
+        exec 'vsp' a:file
     endif
 endfunction
 
