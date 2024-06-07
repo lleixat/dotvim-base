@@ -26,6 +26,7 @@ let g:custom_plugs = {
             \ 'hexmode': 'Roxxorrr mode: [ON]',
             \ 'remaps': 'Fat fingers mode: [ON]',
             \ 'helpers': 'Day to day work',
+            \ 'commands': 'Custom commands',
             \ 'ansible': 'I am sAnsible',
             \ 'testing': 'Test your ass dude!',
             \ }

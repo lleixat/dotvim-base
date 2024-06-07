@@ -14,15 +14,18 @@ func! EmailListToJsonDict () range
         echom "Formated:" (a:lastline - a:firstline + 1) "lines"
     endif
 endfunc
-command! -range OnboardingFormatEmailList <line1>,<line2>call EmailListToJsonDict()
 
 
 func! OnboardThis ()
     :cexpr system(g:portable . '/bin/sq_onboard.sh' . ' ' . shellescape(expand('%')))
 endfunc
 
-command! OnboardThis :call OnboardThis()
-
+"
+" Todo: Vim command that obfuscate :
+"  - [ ] emails
+"  - [ ] IP
+"  - [ ] Current (v)select block?
+"
 
 "
 " Auto enable paste mode on paste
@@ -54,8 +57,6 @@ function PlugReload()
     PlugInstall
     echom "Config reloaded."
 endfunction
-command! PlugReload :call PlugReload()
-autocmd BufWritePost plug.vim PlugReload
 
 function! OpenInSplitIfBufferDirty(file)
     if line('$') == 1 && getline(1) == ''
@@ -65,12 +66,6 @@ function! OpenInSplitIfBufferDirty(file)
     endif
 endfunction
 
-command -nargs=1 -complete=file -bar CleverOpen :call OpenInSplitIfBufferDirty(<q-args>)
-
-command! PlugEdit :call OpenInSplitIfBufferDirty(g:plug_file)
-command! VimEdit :call OpenInSplitIfBufferDirty(g:portable . '/vimrc')
-command! EnvEdit :call OpenInSplitIfBufferDirty($HOME . '/.oh-my-zsh/custom/environment.zsh')
-
 
 let g:bootstrap_env_folder = $HOME . "/bootstrap"
 " TODO: improve target detection (based on file type?)
@@ -78,8 +73,3 @@ function Push2Bootstrap()
     system('cp ' . expand('%:p') . g:bootstrap_env_folder)
     echom "(WIP) Pushed to " . g:bootstrap_env_folder
 endfunction
-command! Push2Bootstrap p:call Push2Bootstrap()
-
-command! PlugEdit :call OpenInSplitIfBufferDirty(g:plug_file)
-
-autocmd FileType ansible-vault exec "!ansible-vault edit %"
