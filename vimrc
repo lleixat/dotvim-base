@@ -26,6 +26,7 @@ let g:custom_plugs = {
             \ 'hexmode': 'Roxxorrr mode: [ON]',
             \ 'remaps': 'Fat fingers mode: [ON]',
             \ 'helpers': 'Day to day work',
+            \ 'the_silver_searcher': 'Line up',
             \ 'commands': 'Custom commands',
             \ 'ansible': 'I am sAnsible',
             \ 'testing': 'Test your ass dude!',
@@ -36,4 +37,3 @@ for f in keys(g:custom_plugs)
     silent! echom "Loading: ". g:custom_plugs[f]
     exe "source ". g:portable . "/etc/" . f . ".vim"
 endfor
-
