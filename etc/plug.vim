@@ -56,7 +56,8 @@ if has('python3')
     Plug 'baverman/vial'
     Plug 'baverman/vial-http'
 endif
-Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
+Plug 'Chun-Yang/vim-action-ag'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-abolish'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
